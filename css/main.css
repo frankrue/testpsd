@@ -154,8 +154,8 @@ body {
   background-size: cover; }
 
 .wf-active .animated-delay {
-  -webkit-animation-delay: 0.5s;
-  animation-delay: 0.5s; }
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s; }
 
 .load-shield {
   pointer-events: none;
@@ -169,10 +169,15 @@ body {
 input, select, table, tr, td, div, span, fieldset, p {
   box-sizing: border-box; }
 
+a, button, input, select, textarea {
+  outline: 0; }
+
 header {
   max-width: 71.25em;
   margin-left: auto;
   margin-right: auto;
+  z-index: 1000;
+  position: relative;
   min-height: 11.25rem; }
   header::after {
     clear: both;
@@ -187,6 +192,29 @@ header {
     background: url(../images/logo.png) no-repeat;
     width: 92px;
     height: 65px; }
+  header button {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 2.5rem;
+    right: 0.9375rem;
+    line-height: 0;
+    padding: 0.375rem;
+    margin-top: -0.9375rem;
+    width: 1.625rem;
+    border: none;
+    background: #57ab4a;
+    transition: background-color 500ms; }
+    header button.on {
+      background-color: #999; }
+    header button .bar {
+      height: 0.125rem;
+      width: 100%;
+      background: white;
+      margin: 0.1875rem 0 0 0;
+      display: block; }
+      header button .bar:first-child {
+        margin-top: 0; }
   header nav {
     float: right;
     position: relative; }
@@ -218,23 +246,25 @@ header {
       width: 3.3125rem; }
 
 .hero {
-  height: 740px;
   text-align: center;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
-  color: white; }
+  color: white;
+  padding-top: 9.375rem;
+  padding-bottom: 6.25rem; }
   .hero h3 {
     font-size: 2.1875em;
     padding: 0;
     margin: 0;
     list-style: none;
-    margin-top: 14.875rem; }
+    margin-bottom: 0.625rem; }
   .hero h1 {
-    font-size: 4.6875em;
-    letter-spacing: -1px;
     padding: 0;
     margin: 0;
     list-style: none;
-    margin-bottom: 15.4375rem; }
+    font-size: 4.6875em;
+    letter-spacing: -1px;
+    margin-bottom: 5rem;
+    line-height: 1em; }
   .hero button {
     font-family: 'proxima-nova', Helvetica, Arial, sans-serif;
     font-weight: 600;
@@ -283,7 +313,8 @@ header {
       margin-right: 0; }
     .snipes article img {
       display: block;
-      margin-bottom: 1.875rem; }
+      margin: 0 auto 1.875rem auto;
+      max-width: 100%; }
     .snipes article h4 {
       color: #4b4845;
       font-size: 1.5em;
@@ -296,7 +327,8 @@ header {
       margin: 0 0 1.25rem 0;
       font-size: 1.125em;
       line-height: 1.3em;
-      color: #64615f; }
+      color: #64615f;
+      min-height: 6.25rem; }
     .snipes article button {
       font-family: 'proxima-nova', Helvetica, Arial, sans-serif;
       font-weight: 600;
@@ -315,7 +347,7 @@ header {
         background: #cfe6d4; }
 
 footer {
-  background: url(../images/footer-bg.jpg) no-repeat bottom center;
+  background: url(../images/footer-bg.jpg) no-repeat bottom right;
   background-size: cover;
   position: fixed;
   right: 0;
@@ -348,6 +380,7 @@ footer {
       footer form fieldset.country:last-child {
         margin-right: 0; }
       footer form fieldset.country select {
+        font-size: 0.9375rem;
         height: 3rem;
         line-height: 3rem;
         width: 100%; }
@@ -367,7 +400,7 @@ footer {
             border-bottom-color: #57ab4a; }
           footer form fieldset.country .selectize-control .selectize-input input {
             font-size: 0.9375rem;
-            top: 8px;
+            top: 0.5rem;
             position: relative;
             min-width: 90%; }
             footer form fieldset.country .selectize-control .selectize-input input::-webkit-input-placeholder {
@@ -375,6 +408,7 @@ footer {
               text-transform: uppercase;
               text-align: center;
               min-height: 1.5em;
+              font-size: 0.9375rem;
               font-family: 'proxima-nova', Helvetica, Arial, sans-serif;
               font-weight: 600; }
             footer form fieldset.country .selectize-control .selectize-input input::-moz-placeholder {
@@ -382,6 +416,7 @@ footer {
               text-transform: uppercase;
               text-align: center;
               min-height: 1.5em;
+              font-size: 0.9375rem;
               font-family: 'proxima-nova', Helvetica, Arial, sans-serif;
               font-weight: 600; }
             footer form fieldset.country .selectize-control .selectize-input input:-moz-placeholder {
@@ -389,6 +424,7 @@ footer {
               text-transform: uppercase;
               text-align: center;
               min-height: 1.5em;
+              font-size: 0.9375rem;
               font-family: 'proxima-nova', Helvetica, Arial, sans-serif;
               font-weight: 600; }
             footer form fieldset.country .selectize-control .selectize-input input:-ms-input-placeholder {
@@ -396,12 +432,13 @@ footer {
               text-transform: uppercase;
               text-align: center;
               min-height: 1.5em;
+              font-size: 0.9375rem;
               font-family: 'proxima-nova', Helvetica, Arial, sans-serif;
               font-weight: 600; }
           footer form fieldset.country .selectize-control .selectize-input div.item + input {
             display: none !important; }
           footer form fieldset.country .selectize-control .selectize-input div.item {
-            padding-top: 8px;
+            padding-top: 0.5rem;
             color: #57ab4a;
             text-align: center;
             width: 90%;
@@ -442,3 +479,218 @@ footer {
           font-size: 0.9375em;
           width: 30%;
           vertical-align: top; }
+          footer form fieldset.email .input-group button:after {
+            content: 'Subscribe'; }
+
+@media (max-width: 1139px) {
+  body {
+    font-size: 12px; }
+  header {
+    min-height: 6.25rem; }
+  .hero {
+    padding-top: 3.75rem; }
+  footer form fieldset.country {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 40.29137%;
+    margin-left: 0%; }
+    footer form fieldset.country:last-child {
+      margin-right: 0; }
+  footer form fieldset.email {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 57.35098%;
+    margin-left: 0%; }
+    footer form fieldset.email:last-child {
+      margin-right: 0; } }
+
+@media (max-width: 1023px) {
+  body {
+    font-size: 12px; }
+  header {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem; }
+  .hero {
+    height: auto;
+    padding-bottom: 3.75rem; }
+    .hero h3 {
+      margin-top: 0rem; }
+    .hero h1 {
+      margin-bottom: 1.875rem; }
+  .snipes {
+    padding: 3.75rem 0.9375rem; }
+  footer {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem; }
+    footer form fieldset.country {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 40.29137%;
+      margin-left: 0%; }
+      footer form fieldset.country:last-child {
+        margin-right: 0; }
+    footer form fieldset.email {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 57.35098%;
+      margin-left: 0%; }
+      footer form fieldset.email:last-child {
+        margin-right: 0; } }
+
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+    padding-bottom: 0; }
+  .wrap {
+    padding-top: 5rem; }
+  header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    min-height: 5rem;
+    padding-top: 0.9375rem;
+    padding-bottom: 0.9375rem;
+    padding-left: 0;
+    padding-right: 0;
+    transition: background-color 500ms; }
+    header.affix {
+      background: rgba(0, 0, 0, 0.6); }
+    header .logo {
+      height: 3.125rem;
+      background-size: contain;
+      margin-left: 0.9375rem; }
+    header button {
+      display: block; }
+    header .active-bar {
+      display: none; }
+    header nav {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 100%;
+      transition: left 500ms, box-shadow 500ms;
+      background: white;
+      width: 80%;
+      padding-top: 5rem; }
+      header nav.open {
+        left: 20%;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); }
+      header nav ul {
+        border-top: 1px solid #eee; }
+        header nav ul li {
+          float: none;
+          border-bottom: 1px solid #eee; }
+          header nav ul li a {
+            padding: 12px 20px 8px 20px;
+            margin: 0;
+            color: #57ab4a; }
+            header nav ul li a:hover {
+              background: #eee; }
+            header nav ul li a.active {
+              background: #57ab4a;
+              color: white; }
+              header nav ul li a.active:hover {
+                background: #57ab4a; }
+  .hero {
+    font-size: 9px;
+    height: auto;
+    padding-bottom: 1.875rem; }
+    .hero h3 {
+      margin-top: 1.25rem; }
+    .hero h1 {
+      margin-bottom: 0.9375rem; }
+    .hero button {
+      font-size: 0.875rem; }
+  .snipes {
+    padding-top: 1.875rem;
+    padding-bottom: 0rem; }
+    .snipes h1 {
+      font-size: 2.5em; }
+    .snipes h3 {
+      font-size: 1.25em;
+      margin-bottom: 1.875rem; }
+    .snipes article {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 65.88078%;
+      margin-left: 17.05961%;
+      margin-bottom: 3.75rem; }
+      .snipes article:last-child {
+        margin-right: 0; }
+      .snipes article p {
+        min-height: 0; }
+  footer {
+    position: static;
+    height: 8.75rem; }
+    footer form {
+      padding-top: 1.25rem; }
+      footer form fieldset.country {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 40.29137%;
+        margin-left: 0%; }
+        footer form fieldset.country:last-child {
+          margin-right: 0; }
+      footer form fieldset.email {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 57.35098%;
+        margin-left: 0%; }
+        footer form fieldset.email:last-child {
+          margin-right: 0; } }
+
+@media (max-width: 639px) {
+  .hero {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem; }
+  .snipes {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem; }
+    .snipes article {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%;
+      margin-left: 0%; }
+      .snipes article:last-child {
+        margin-right: 0; }
+  footer {
+    height: auto;
+    padding-bottom: 1.25rem; }
+    footer form fieldset.country {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 82.94039%;
+      margin-left: 8.5298%; }
+      footer form fieldset.country:last-child {
+        margin-right: 0; }
+    footer form fieldset.email {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 82.94039%;
+      margin-left: 8.5298%; }
+      footer form fieldset.email:last-child {
+        margin-right: 0; }
+      footer form fieldset.email .input-group input {
+        width: 80%; }
+      footer form fieldset.email .input-group button {
+        width: 20%; }
+        footer form fieldset.email .input-group button:after {
+          content: ' ';
+          display: inline-block;
+          vertical-align: middle;
+          height: 0;
+          width: 0;
+          border-bottom: 0.625rem solid transparent;
+          border-left: 0.9375rem solid white;
+          border-top: 0.625rem solid transparent; } }

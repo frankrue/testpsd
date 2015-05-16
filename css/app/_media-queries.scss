@@ -1,0 +1,222 @@
+// tablet landscape
+@media (max-width: 1139px) {
+  body {
+    font-size: 12px;
+  }
+  header {
+    min-height: rem(100);
+  }
+  .hero {
+    padding-top: rem(60);
+  }
+  footer {
+    form {
+      fieldset.country {
+        @include span-columns(5);
+        @include shift(0);
+      }
+      fieldset.email {
+        @include span-columns(7);
+        @include shift(0);
+      }
+    }
+  }
+}
+
+
+// tablet portrait
+@media (max-width: 1023px) {
+  body {
+    font-size: 12px;
+  }
+  header {
+    padding-left: rem(30);
+    padding-right: rem(30);
+  }
+  .hero {
+    height: auto;
+    padding-bottom: rem(60);
+    h3 {
+      margin-top: rem(0);
+    }
+    h1 {
+      margin-bottom: rem(30);
+    }
+  }
+  .snipes {
+    padding: rem(60) rem(15);
+  }
+  footer {
+    padding-left: rem(15);
+    padding-right: rem(15);
+    form {
+      fieldset.country {
+        @include span-columns(5);
+        @include shift(0);
+      }
+      fieldset.email {
+        @include span-columns(7);
+        @include shift(0);
+      }
+    }
+  }
+}
+
+// mobile landscape
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+    padding-bottom: 0;
+  }
+  .wrap {
+    padding-top: rem(80);
+  }
+  header {
+    @include position(fixed, 0 0 null 0);
+    min-height: rem(80);
+    padding-top: rem(15);
+    padding-bottom: rem(15);
+    padding-left: 0;
+    padding-right: 0;
+    transition: background-color 500ms;
+    &.affix {
+      background: rgba(0,0,0,0.6);
+    }
+    .logo {
+      height: rem(50);
+      background-size: contain;
+      margin-left: rem(15);
+    }
+    button {
+      display: block;
+    }
+    .active-bar {
+      display: none;
+    }
+    nav {
+      @include position(fixed, 0 null 0 100%);
+      transition: left 500ms, box-shadow 500ms;
+      background: white;
+      width: 80%;
+      padding-top: rem(80);
+      &.open {
+        left: 20%;
+        box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      }
+      ul {
+        border-top: 1px solid #eee;
+        li {
+          float: none;
+          border-bottom: 1px solid #eee;
+          a {
+            padding: 12px 20px 8px 20px;
+            margin: 0;
+            color: $darkaccent;
+            &:hover {
+              background: #eee;
+            }
+            &.active {
+              background: $darkaccent;
+              color: white;
+              &:hover {
+                background: $darkaccent;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .hero {
+    font-size: 9px;
+    height: auto;
+    padding-bottom: rem(30);
+    h3 {
+      margin-top: rem(20);
+    }
+    h1 {
+      margin-bottom: rem(15);
+    }
+    button {
+      font-size: rem(14);
+    }
+  }
+  .snipes {
+    padding-top: rem(30);
+    padding-bottom: rem(0);
+    h1 {
+      font-size: 2.5em;
+    }
+    h3 {
+      font-size: 1.25em;
+      margin-bottom: rem(30);
+    }
+    article {
+      @include span-columns(8);
+      @include shift(2);
+      margin-bottom: rem(60);
+      p {
+        min-height: 0;
+      }
+    }
+  }
+  footer {
+    position: static;
+    height: rem(140);
+    form {
+      padding-top: rem(20);
+      fieldset.country {
+        @include span-columns(5);
+        @include shift(0);
+      }
+      fieldset.email {
+        @include span-columns(7);
+        @include shift(0);
+      }
+    }
+  }
+}
+
+// mobile portrait
+@media (max-width: 639px) {
+  .hero {
+    padding-left: rem(15);
+    padding-right: rem(15);
+  }
+  .snipes {
+    padding-left: rem(15);
+    padding-right: rem(15);
+    article {
+      @include span-columns(12);
+      @include shift(0);
+    }
+  }
+  footer {
+    height: auto;
+    padding-bottom: rem(20);
+    form {
+      fieldset.country {
+        @include span-columns(10);
+        @include shift(1);
+      }
+      fieldset.email {
+        @include span-columns(10);
+        @include shift(1);
+        .input-group {
+          input {
+            width: 80%;
+          }
+          button {
+            width: 20%;
+            &:after {
+              content: ' ';
+              display: inline-block;
+              vertical-align: middle;
+              @include triangle(rem(20) rem(15), white, right);
+            }
+          }
+        }
+      }
+    }
+  }
+}

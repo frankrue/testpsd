@@ -1,12 +1,39 @@
 header {
   @include outer-container;
   @include clearfix;
+  z-index: 1000;
+  position: relative;
   min-height: rem(180);
   .logo {
     float: left;
     background: url(../images/logo.png) no-repeat;
     width: 92px;
     height: 65px;
+  }
+  button {
+    display: none;
+    cursor: pointer;
+    @include position(absolute, rem(40) rem(15) null null);
+    line-height: 0;
+    padding: rem(6);
+    margin-top: rem(-15);
+    width: rem(26);
+    border: none;
+    background: $darkaccent;
+    transition: background-color 500ms;
+    &.on {
+      background-color: #999;
+    }
+    .bar {
+      height: rem(2);
+      width: 100%;
+      background: white;
+      margin: rem(3) 0 0 0;
+      display: block;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
   }
   nav {
     float: right;

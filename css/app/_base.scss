@@ -15,7 +15,7 @@ body {
 // animations should start after fonts are loaded
 .wf-active .animated-delay {
   @extend .animated;
-  animation-delay: 0.5s;
+  animation-delay: 1s;
 }
 
 // hides all content until fonts are ready
@@ -27,4 +27,8 @@ body {
 
 input, select, table, tr, td, div, span, fieldset, p {
   box-sizing: border-box;
+}
+
+a, button, input, select, textarea {
+  outline: 0;
 }
