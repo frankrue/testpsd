@@ -1,9 +1,9 @@
-@import url(../js/lib/normalize.css/normalize.css);
 /*!
 Animate.css - http://daneden.me/animate
 Licensed under the MIT license - http://opensource.org/licenses/MIT
 Copyright (c) 2015 Daniel Eden
 */
+@import url(../js/lib/normalize.css/normalize.css);
 @import url(../js/lib/selectize/dist/css/selectize.css);
 body {
   -webkit-backface-visibility: hidden; }
