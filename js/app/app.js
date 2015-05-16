@@ -19,9 +19,6 @@ require([
   var $window;
   var $header;
 
-  // early start for the fonts
-  TypeKitFonts.init(document);
-
   // on DOM ready
   $(function() {
 
@@ -32,6 +29,8 @@ require([
 
   // initialization of vars, components, etc.
   function init() {
+
+    TypeKitFonts.init(document);
 
     FastClick.attach(document.body);
     $window = $(window);
