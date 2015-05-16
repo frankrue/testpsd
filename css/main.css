@@ -83,7 +83,8 @@ header {
         margin-top: 0; }
   header nav {
     float: right;
-    position: relative; }
+    position: relative;
+    margin-top: 0.9375rem; }
     header nav ul {
       padding: 0;
       margin: 0;
@@ -446,6 +447,7 @@ footer {
     header .active-bar {
       display: none; }
     header nav {
+      margin-top: 0;
       position: fixed;
       top: 0;
       bottom: 0;

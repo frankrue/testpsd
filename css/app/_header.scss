@@ -38,6 +38,7 @@ header {
   nav {
     float: right;
     position: relative;
+    margin-top: rem(15);
     ul {
       @include flatten;
       li {
