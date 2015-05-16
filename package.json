@@ -1,7 +1,7 @@
 {
   "name": "testpsd",
   "version": "1.0.0",
-  "description": "Basic package for a website cut up and dev by Frank Rue (developer) for Krafted By Us.",
+  "description": "Basic package for a website cut up and dev by Frank Rue (developer).",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
