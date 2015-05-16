@@ -2,6 +2,7 @@
 @media (max-width: 1139px) {
   body {
     font-size: 12px;
+    padding-bottom: rem(130);
   }
   header {
     min-height: rem(100);
@@ -9,8 +10,18 @@
   .hero {
     padding-top: rem(60);
   }
+  .snipes {
+    padding-top: rem(30);
+    h3 {
+      margin-bottom: rem(30);
+    }
+  }
   footer {
+    height: auto;
+    padding-bottom: rem(20);
+    padding-top: rem(20);
     form {
+      padding: 0 rem(15);
       fieldset.country {
         @include span-columns(5);
         @include shift(0);
@@ -35,7 +46,8 @@
   }
   .hero {
     height: auto;
-    padding-bottom: rem(60);
+    padding-top: rem(30);
+    padding-bottom: rem(90);
     h3 {
       margin-top: rem(0);
     }
@@ -194,10 +206,15 @@
   footer {
     height: auto;
     padding-bottom: rem(20);
+    padding-left: 0;
+    padding-right: 0;
     form {
+      padding-left: 0;
+      padding-right: 0;
       fieldset.country {
         @include span-columns(10);
         @include shift(1);
+        margin-right: 0;
       }
       fieldset.email {
         @include span-columns(10);

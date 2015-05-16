@@ -37,6 +37,7 @@ require([
     $window = $(window);
     $header = $('header');
     $('body').swipe({
+      allowPageScroll: 'vertical',
       threshold: 75,
       swipe: onSwipe
     });

@@ -249,8 +249,8 @@ header {
   text-align: center;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
   color: white;
-  padding-top: 9.375rem;
-  padding-bottom: 6.25rem; }
+  padding-top: 6.25rem;
+  padding-bottom: 9.375rem; }
   .hero h3 {
     font-size: 2.1875em;
     padding: 0;
@@ -484,27 +484,38 @@ footer {
 
 @media (max-width: 1139px) {
   body {
-    font-size: 12px; }
+    font-size: 12px;
+    padding-bottom: 8.125rem; }
   header {
     min-height: 6.25rem; }
   .hero {
     padding-top: 3.75rem; }
-  footer form fieldset.country {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 40.29137%;
-    margin-left: 0%; }
-    footer form fieldset.country:last-child {
-      margin-right: 0; }
-  footer form fieldset.email {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 57.35098%;
-    margin-left: 0%; }
-    footer form fieldset.email:last-child {
-      margin-right: 0; } }
+  .snipes {
+    padding-top: 1.875rem; }
+    .snipes h3 {
+      margin-bottom: 1.875rem; }
+  footer {
+    height: auto;
+    padding-bottom: 1.25rem;
+    padding-top: 1.25rem; }
+    footer form {
+      padding: 0 0.9375rem; }
+      footer form fieldset.country {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 40.29137%;
+        margin-left: 0%; }
+        footer form fieldset.country:last-child {
+          margin-right: 0; }
+      footer form fieldset.email {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 57.35098%;
+        margin-left: 0%; }
+        footer form fieldset.email:last-child {
+          margin-right: 0; } }
 
 @media (max-width: 1023px) {
   body {
@@ -514,7 +525,8 @@ footer {
     padding-right: 1.875rem; }
   .hero {
     height: auto;
-    padding-bottom: 3.75rem; }
+    padding-top: 1.875rem;
+    padding-bottom: 5.625rem; }
     .hero h3 {
       margin-top: 0rem; }
     .hero h1 {
@@ -664,33 +676,39 @@ footer {
         margin-right: 0; }
   footer {
     height: auto;
-    padding-bottom: 1.25rem; }
-    footer form fieldset.country {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 82.94039%;
-      margin-left: 8.5298%; }
-      footer form fieldset.country:last-child {
+    padding-bottom: 1.25rem;
+    padding-left: 0;
+    padding-right: 0; }
+    footer form {
+      padding-left: 0;
+      padding-right: 0; }
+      footer form fieldset.country {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 82.94039%;
+        margin-left: 8.5298%;
         margin-right: 0; }
-    footer form fieldset.email {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 82.94039%;
-      margin-left: 8.5298%; }
-      footer form fieldset.email:last-child {
-        margin-right: 0; }
-      footer form fieldset.email .input-group input {
-        width: 80%; }
-      footer form fieldset.email .input-group button {
-        width: 20%; }
-        footer form fieldset.email .input-group button:after {
-          content: ' ';
-          display: inline-block;
-          vertical-align: middle;
-          height: 0;
-          width: 0;
-          border-bottom: 0.625rem solid transparent;
-          border-left: 0.9375rem solid white;
-          border-top: 0.625rem solid transparent; } }
+        footer form fieldset.country:last-child {
+          margin-right: 0; }
+      footer form fieldset.email {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 82.94039%;
+        margin-left: 8.5298%; }
+        footer form fieldset.email:last-child {
+          margin-right: 0; }
+        footer form fieldset.email .input-group input {
+          width: 80%; }
+        footer form fieldset.email .input-group button {
+          width: 20%; }
+          footer form fieldset.email .input-group button:after {
+            content: ' ';
+            display: inline-block;
+            vertical-align: middle;
+            height: 0;
+            width: 0;
+            border-bottom: 0.625rem solid transparent;
+            border-left: 0.9375rem solid white;
+            border-top: 0.625rem solid transparent; } }
