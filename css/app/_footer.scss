@@ -76,9 +76,8 @@ footer {
       border: none;
       .input-group {
         width: 100%;
-        display: table;
         input {
-          display: table-cell;
+          float: left;
           padding: rem(8) rem(16);
           border: none;
           height: rem(48);
@@ -89,7 +88,7 @@ footer {
           outline: 0;
         }
         button {
-          display: table-cell;
+          float: left;
           height: rem(48);
           background: $darkaccent;
           color: white;
