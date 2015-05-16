@@ -4,12 +4,14 @@ require([
   'jquery-touchswipe',
   './TypeKitFonts',
   'gsap',
+  'selectize'
 ],function(
   $,
   FastClick,
   _jqts,
   TypeKitFonts,
-  _gsap
+  _gsap,
+  _selectize
 ) {
 
   'use strict';
@@ -36,6 +38,7 @@ require([
   function bind() {
 
     $('header nav a').click(onNavClick);
+    $('footer .country select').selectize();
 
   }
 

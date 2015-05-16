@@ -1,0 +1,105 @@
+footer {
+  background: url(../images/footer-bg.jpg) no-repeat bottom center;
+  background-size: cover;
+  @include position(fixed, null 0 0 0);
+  height: rem(235);
+  form {
+    @include outer-container;
+    padding: rem(60) 0 0 0;
+    p {
+      text-align: center;
+      color: white;
+      margin: 0 0 rem(20) 0;
+      @include font-bold;
+      font-size: em(18);
+    }
+    fieldset.country {
+      @include span-columns(3);
+      @include shift(2);
+      border: none;
+      select {
+        height: rem(48);
+        line-height: rem(48);
+        width: 100%;
+      }
+      .selectize-control {
+        height: rem(48);
+        font-size: rem(15);
+        .selectize-dropdown-content {
+          max-height: 80px;
+        }
+        .selectize-input {
+          border-radius: 6px;
+          border: none;
+          height: rem(48);
+          font-size: rem(15);
+          &:after {
+            border-top-color: $darkaccent;
+          }
+          &.dropdown-active {
+            &:after {
+              border-bottom-color: $darkaccent;
+            }
+          }
+          input {
+            font-size: rem(15);
+            top: 8px;
+            position: relative;
+            min-width: 90%;
+            @include placeholder {
+              color: $darkaccent;
+              text-transform: uppercase;
+              text-align: center;
+              min-height: 1.5em;
+              @include font-bold;
+            }
+          }
+          div.item + input {
+            display: none !important;
+          }
+          div.item {
+            padding-top: 8px;
+            color: $darkaccent;
+            text-align: center;
+            width: 90%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+    fieldset.email {
+      @include span-columns(5);
+      border: none;
+      .input-group {
+        width: 100%;
+        display: table;
+        input {
+          display: table-cell;
+          padding: rem(8) rem(16);
+          border: none;
+          height: rem(48);
+          border-radius: 6px 0 0 6px;
+          font-size: em(18);
+          width: 70%;
+          vertical-align: top;
+          outline: 0;
+        }
+        button {
+          display: table-cell;
+          height: rem(48);
+          background: $darkaccent;
+          color: white;
+          text-transform: uppercase;
+          border: none;
+          border-radius: 0 6px 6px 0;
+          @include font-bold();
+          font-size: em(15);
+          width: 30%;
+          vertical-align: top;
+        }
+      }
+    }
+  }
+}

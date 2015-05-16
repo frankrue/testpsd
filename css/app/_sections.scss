@@ -18,3 +18,47 @@
     @include btn( white, $darkaccent, white);
   }
 }
+
+.snipes {
+  @include outer-container;
+  text-align: center;
+  padding: rem(100) 0 rem(50) 0;
+  h1 {
+    font-size: em(48);
+    color: #4b4845;
+    @include flatten;
+  }
+  h3 {
+    @include font-default;
+    font-size: em(25);
+    color: #afafaf;
+    @include flatten;
+    margin-bottom: rem(90);
+  }
+  article {
+    @include span-columns(4);
+    img {
+      display: block;
+      margin-bottom: rem(30);
+    }
+    h4 {
+      color: #4b4845;
+      font-size: em(24);
+      @include flatten;
+      margin-bottom: rem(14);
+    }
+    p {
+      padding: 0 rem(10);
+      margin: 0 0 rem(20) 0;
+      font-size: em(18);
+      line-height: 1.3em;
+      color: #64615f;
+    }
+    button {
+      @include btn( white, $darkaccent, $darkaccent );
+      border-radius: 6px;
+      font-size: rem(15);
+      padding: rem(15) rem(38);
+    }
+  }
+}

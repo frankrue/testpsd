@@ -4,6 +4,7 @@ Animate.css - http://daneden.me/animate
 Licensed under the MIT license - http://opensource.org/licenses/MIT
 Copyright (c) 2015 Daniel Eden
 */
+@import url(../js/lib/selectize/dist/css/selectize.css);
 body {
   -webkit-backface-visibility: hidden; }
 
@@ -144,6 +145,7 @@ html {
 body {
   font-family: 'proxima-nova', Helvetica, Arial, sans-serif;
   font-weight: normal;
+  padding-bottom: 14.6875rem;
   -webkit-font-smoothing: antialiased; }
 
 .wrap {
@@ -163,6 +165,9 @@ body {
   right: 0;
   bottom: 0;
   left: 0; }
+
+input, select, table, tr, td, div, span, fieldset, p {
+  box-sizing: border-box; }
 
 header {
   max-width: 71.25em;
@@ -196,7 +201,7 @@ header {
         float: left; }
         header nav ul li a {
           font-family: 'proxima-nova', Helvetica, Arial, sans-serif;
-          font-weight: 700;
+          font-weight: 600;
           font-size: 1.125em;
           text-decoration: none;
           text-transform: uppercase;
@@ -232,7 +237,7 @@ header {
     margin-bottom: 15.4375rem; }
   .hero button {
     font-family: 'proxima-nova', Helvetica, Arial, sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 1.15em;
     text-transform: uppercase;
     line-height: 1em;
@@ -241,3 +246,199 @@ header {
     padding: 16px 38px;
     background: white;
     color: #57ab4a; }
+    .hero button:hover {
+      background: #cfe6d4; }
+
+.snipes {
+  max-width: 71.25em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 6.25rem 0 3.125rem 0; }
+  .snipes::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .snipes h1 {
+    font-size: 3em;
+    color: #4b4845;
+    padding: 0;
+    margin: 0;
+    list-style: none; }
+  .snipes h3 {
+    font-family: 'proxima-nova', Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 1.5625em;
+    color: #afafaf;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-bottom: 5.625rem; }
+  .snipes article {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    .snipes article:last-child {
+      margin-right: 0; }
+    .snipes article img {
+      display: block;
+      margin-bottom: 1.875rem; }
+    .snipes article h4 {
+      color: #4b4845;
+      font-size: 1.5em;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      margin-bottom: 0.875rem; }
+    .snipes article p {
+      padding: 0 0.625rem;
+      margin: 0 0 1.25rem 0;
+      font-size: 1.125em;
+      line-height: 1.3em;
+      color: #64615f; }
+    .snipes article button {
+      font-family: 'proxima-nova', Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 1.15em;
+      text-transform: uppercase;
+      line-height: 1em;
+      border-radius: 4px;
+      border: 2px solid #57ab4a;
+      padding: 16px 38px;
+      background: white;
+      color: #57ab4a;
+      border-radius: 6px;
+      font-size: 0.9375rem;
+      padding: 0.9375rem 2.375rem; }
+      .snipes article button:hover {
+        background: #cfe6d4; }
+
+footer {
+  background: url(../images/footer-bg.jpg) no-repeat bottom center;
+  background-size: cover;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 14.6875rem; }
+  footer form {
+    max-width: 71.25em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3.75rem 0 0 0; }
+    footer form::after {
+      clear: both;
+      content: "";
+      display: table; }
+    footer form p {
+      text-align: center;
+      color: white;
+      margin: 0 0 1.25rem 0;
+      font-family: 'proxima-nova', Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 1.125em; }
+    footer form fieldset.country {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 23.23176%;
+      margin-left: 17.05961%;
+      border: none; }
+      footer form fieldset.country:last-child {
+        margin-right: 0; }
+      footer form fieldset.country select {
+        height: 3rem;
+        line-height: 3rem;
+        width: 100%; }
+      footer form fieldset.country .selectize-control {
+        height: 3rem;
+        font-size: 0.9375rem; }
+        footer form fieldset.country .selectize-control .selectize-dropdown-content {
+          max-height: 80px; }
+        footer form fieldset.country .selectize-control .selectize-input {
+          border-radius: 6px;
+          border: none;
+          height: 3rem;
+          font-size: 0.9375rem; }
+          footer form fieldset.country .selectize-control .selectize-input:after {
+            border-top-color: #57ab4a; }
+          footer form fieldset.country .selectize-control .selectize-input.dropdown-active:after {
+            border-bottom-color: #57ab4a; }
+          footer form fieldset.country .selectize-control .selectize-input input {
+            font-size: 0.9375rem;
+            top: 8px;
+            position: relative;
+            min-width: 90%; }
+            footer form fieldset.country .selectize-control .selectize-input input::-webkit-input-placeholder {
+              color: #57ab4a;
+              text-transform: uppercase;
+              text-align: center;
+              min-height: 1.5em;
+              font-family: 'proxima-nova', Helvetica, Arial, sans-serif;
+              font-weight: 600; }
+            footer form fieldset.country .selectize-control .selectize-input input::-moz-placeholder {
+              color: #57ab4a;
+              text-transform: uppercase;
+              text-align: center;
+              min-height: 1.5em;
+              font-family: 'proxima-nova', Helvetica, Arial, sans-serif;
+              font-weight: 600; }
+            footer form fieldset.country .selectize-control .selectize-input input:-moz-placeholder {
+              color: #57ab4a;
+              text-transform: uppercase;
+              text-align: center;
+              min-height: 1.5em;
+              font-family: 'proxima-nova', Helvetica, Arial, sans-serif;
+              font-weight: 600; }
+            footer form fieldset.country .selectize-control .selectize-input input:-ms-input-placeholder {
+              color: #57ab4a;
+              text-transform: uppercase;
+              text-align: center;
+              min-height: 1.5em;
+              font-family: 'proxima-nova', Helvetica, Arial, sans-serif;
+              font-weight: 600; }
+          footer form fieldset.country .selectize-control .selectize-input div.item + input {
+            display: none !important; }
+          footer form fieldset.country .selectize-control .selectize-input div.item {
+            padding-top: 8px;
+            color: #57ab4a;
+            text-align: center;
+            width: 90%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap; }
+    footer form fieldset.email {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 40.29137%;
+      border: none; }
+      footer form fieldset.email:last-child {
+        margin-right: 0; }
+      footer form fieldset.email .input-group {
+        width: 100%;
+        display: table; }
+        footer form fieldset.email .input-group input {
+          display: table-cell;
+          padding: 0.5rem 1rem;
+          border: none;
+          height: 3rem;
+          border-radius: 6px 0 0 6px;
+          font-size: 1.125em;
+          width: 70%;
+          vertical-align: top;
+          outline: 0; }
+        footer form fieldset.email .input-group button {
+          display: table-cell;
+          height: 3rem;
+          background: #57ab4a;
+          color: white;
+          text-transform: uppercase;
+          border: none;
+          border-radius: 0 6px 6px 0;
+          font-family: 'proxima-nova', Helvetica, Arial, sans-serif;
+          font-weight: 600;
+          font-size: 0.9375em;
+          width: 30%;
+          vertical-align: top; }

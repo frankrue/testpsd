@@ -15,8 +15,12 @@
   padding: 16px 38px;
   background: $bg-color;
   color: $fg-color;
+  &:hover {
+    background: $hover-color;
+  }
 }
 
 // colors
 $accent: #70df88;
 $darkaccent: #57ab4a;
+$hover-color: #cfe6d4;
