@@ -1,0 +1,25 @@
+$max-width: em(1140);
+
+body {
+  @include font-default;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  padding-top: rem(80);
+  background: url(../images/bg.jpg) no-repeat top center;
+  background-size: cover;
+}
+
+// animations should start after fonts are loaded
+.wf-active .animated-delay {
+  @extend .animated;
+  animation-delay: 0.5s;
+}
+
+// hides all content until fonts are ready
+.load-shield {
+  pointer-events: none;
+  background: white;
+  @include position(fixed, 0 0 0 0);
+}

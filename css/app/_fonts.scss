@@ -1,0 +1,9 @@
+@mixin font-default() {
+  font-family: 'proxima-nova', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+}
+
+@mixin font-bold() {
+  font-family: 'proxima-nova', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}

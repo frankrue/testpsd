@@ -1,0 +1,40 @@
+header {
+  @include outer-container;
+  @include clearfix;
+  min-height: rem(180);
+  .logo {
+    float: left;
+    background: url(../images/logo.png) no-repeat;
+    width: 92px;
+    height: 65px;
+  }
+  nav {
+    float: right;
+    position: relative;
+    ul {
+      @include flatten;
+      li {
+        @include flatten;
+        float: left;
+        a {
+          @include font-bold;
+          font-size: em(18);
+          text-decoration: none;
+          text-transform: uppercase;
+          display: block;
+          color: white;
+          padding: rem(6) 0;
+          margin: 0 rem(20);
+        }
+      }
+    }
+    .active-bar {
+      height: rem(3);
+      background: $accent;
+      position: absolute;
+      bottom: 0;
+      left: rem(20);
+      width: rem(53);
+    }
+  }
+}

@@ -1,0 +1,22 @@
+// kills margins, padding, and bullets
+@mixin flatten {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@mixin btn( $bg-color, $fg-color, $border-color ) {
+  @include font-bold;
+  font-size: 1.15em;
+  text-transform: uppercase;
+  line-height: 1em;
+  border-radius: 4px;
+  border: 2px solid $border-color;
+  padding: 16px 38px;
+  background: $bg-color;
+  color: $fg-color;
+}
+
+// colors
+$accent: #70df88;
+$darkaccent: #57ab4a;

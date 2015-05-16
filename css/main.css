@@ -1,0 +1,243 @@
+@import url(../js/lib/normalize.css/normalize.css);
+/*!
+Animate.css - http://daneden.me/animate
+Licensed under the MIT license - http://opensource.org/licenses/MIT
+Copyright (c) 2015 Daniel Eden
+*/
+body {
+  -webkit-backface-visibility: hidden; }
+
+.animated, .wf-active .animated-delay {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+  .animated.infinite, .wf-active .infinite.animated-delay {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite; }
+  .animated.hinge, .wf-active .hinge.animated-delay {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s; }
+  .animated.bounceIn,
+  .wf-active .bounceIn.animated-delay,
+  .animated.bounceOut, .wf-active .bounceOut.animated-delay {
+    -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s; }
+  .animated.flipOutX,
+  .wf-active .flipOutX.animated-delay,
+  .animated.flipOutY, .wf-active .flipOutY.animated-delay {
+    -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s; }
+
+@-webkit-keyframes bounceIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.3); }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.05); }
+  70% {
+    -webkit-transform: scale(0.9); }
+  100% {
+    -webkit-transform: scale(1); } }
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+    transform: scale(0.3); }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05); }
+  70% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+.bounceIn {
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn; }
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn; }
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut; }
+
+@-webkit-keyframes slideInDown {
+  0% {
+    -webkit-transform: translate3d(0, -100%, 0);
+    visibility: visible; }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0); } }
+
+@keyframes slideInDown {
+  0% {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible; }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+.slideInDown {
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown; }
+
+@-webkit-keyframes slideInUp {
+  0% {
+    -webkit-transform: translate3d(0, 100%, 0);
+    visibility: visible; }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0); } }
+
+@keyframes slideInUp {
+  0% {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: visible; }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+.slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp; }
+
+html {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+body {
+  font-family: 'proxima-nova', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased; }
+
+.wrap {
+  padding-top: 5rem;
+  background: url(../images/bg.jpg) no-repeat top center;
+  background-size: cover; }
+
+.wf-active .animated-delay {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s; }
+
+.load-shield {
+  pointer-events: none;
+  background: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+header {
+  max-width: 71.25em;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 11.25rem; }
+  header::after {
+    clear: both;
+    content: "";
+    display: table; }
+  header::after {
+    clear: both;
+    content: "";
+    display: table; }
+  header .logo {
+    float: left;
+    background: url(../images/logo.png) no-repeat;
+    width: 92px;
+    height: 65px; }
+  header nav {
+    float: right;
+    position: relative; }
+    header nav ul {
+      padding: 0;
+      margin: 0;
+      list-style: none; }
+      header nav ul li {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        float: left; }
+        header nav ul li a {
+          font-family: 'proxima-nova', Helvetica, Arial, sans-serif;
+          font-weight: 700;
+          font-size: 1.125em;
+          text-decoration: none;
+          text-transform: uppercase;
+          display: block;
+          color: white;
+          padding: 0.375rem 0;
+          margin: 0 1.25rem; }
+    header nav .active-bar {
+      height: 0.1875rem;
+      background: #70df88;
+      position: absolute;
+      bottom: 0;
+      left: 1.25rem;
+      width: 3.3125rem; }
+
+.hero {
+  height: 740px;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  color: white; }
+  .hero h3 {
+    font-size: 2.1875em;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-top: 14.875rem; }
+  .hero h1 {
+    font-size: 4.6875em;
+    letter-spacing: -1px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-bottom: 15.4375rem; }
+  .hero button {
+    font-family: 'proxima-nova', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.15em;
+    text-transform: uppercase;
+    line-height: 1em;
+    border-radius: 4px;
+    border: 2px solid white;
+    padding: 16px 38px;
+    background: white;
+    color: #57ab4a; }

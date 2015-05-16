@@ -1,0 +1,33 @@
+{
+  "name": "testpsd",
+  "version": "0.0.0",
+  "authors": [
+    "Frank Rue <frankrue@gmail.com>"
+  ],
+  "description": "Test PSD Website for Krafted By Us.",
+  "main": "index.html",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "homepage": "http://therues.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "js/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "requirejs": "~2.1.17",
+    "fastclick": "~1.0.6",
+    "jquery-touchswipe": "~1.6.8",
+    "neat": "~1.7.2",
+    "bourbon": "~4.2.3",
+    "normalize.css": "~3.0.3",
+    "gsap": "~1.16.1",
+    "animate-sass": "~0.6.4"
+  }
+}
