@@ -2,8 +2,27 @@
 // Import everything to generate your animate sass module //
 ////////////////////////////////////////////////////////////
 @import "helpers/mixins",
-	"helpers/settings",
-	"helpers/base";
+	"helpers/settings";
+
+// FADE
+@import	"animations/fade-enter/fadeIn",
+	"animations/fade-enter/fadeInDown",
+	"animations/fade-enter/fadeInDownBig",
+	"animations/fade-enter/fadeInLeft",
+	"animations/fade-enter/fadeInLeftBig",
+	"animations/fade-enter/fadeInRight",
+	"animations/fade-enter/fadeInRightBig",
+	"animations/fade-enter/fadeInUp",
+	"animations/fade-enter/fadeInUpBig",
+	"animations/fade-exit/fadeOut",
+	"animations/fade-exit/fadeOutDown",
+	"animations/fade-exit/fadeOutDownBig",
+	"animations/fade-exit/fadeOutLeft",
+	"animations/fade-exit/fadeOutLeftBig",
+	"animations/fade-exit/fadeOutRight",
+	"animations/fade-exit/fadeOutRightBig",
+	"animations/fade-exit/fadeOutUp",
+	"animations/fade-exit/fadeOutUpBig";
 
 // ATTENTION
 @import	"animations/attention-seekers/bounce",
@@ -26,26 +45,6 @@
 	"animations/bounce-exit/bounceOutLeft",
 	"animations/bounce-exit/bounceOutRight",
 	"animations/bounce-exit/bounceOutUp";
-
-// FADE
-@import	"animations/fade-enter/fadeIn",
-	"animations/fade-enter/fadeInDown",
-	"animations/fade-enter/fadeInDownBig",
-	"animations/fade-enter/fadeInLeft",
-	"animations/fade-enter/fadeInLeftBig",
-	"animations/fade-enter/fadeInRight",
-	"animations/fade-enter/fadeInRightBig",
-	"animations/fade-enter/fadeInUp",
-	"animations/fade-enter/fadeInUpBig",
-	"animations/fade-exit/fadeOut",
-	"animations/fade-exit/fadeOutDown",
-	"animations/fade-exit/fadeOutDownBig",
-	"animations/fade-exit/fadeOutLeft",
-	"animations/fade-exit/fadeOutLeftBig",
-	"animations/fade-exit/fadeOutRight",
-	"animations/fade-exit/fadeOutRightBig",
-	"animations/fade-exit/fadeOutUp",
-	"animations/fade-exit/fadeOutUpBig";
 
 // FLIP
 @import "animations/flippers/flip",
@@ -96,3 +95,5 @@
 	"animations/zoom-exit/zoomOutLeft",
 	"animations/zoom-exit/zoomOutRight",
 	"animations/zoom-exit/zoomOutUp";
+
+@import	"helpers/base";

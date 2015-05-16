@@ -1,34 +1,36 @@
-/*!
-Animate.css - http://daneden.me/animate
-Licensed under the MIT license - http://opensource.org/licenses/MIT
-Copyright (c) 2015 Daniel Eden
-*/
 @import url(../js/lib/normalize.css/normalize.css);
 @import url(../js/lib/selectize/dist/css/selectize.css);
-body {
-  -webkit-backface-visibility: hidden; }
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
-.animated, .wf-active .animated-delay {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both; }
-  .animated.infinite, .wf-active .infinite.animated-delay {
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite; }
-  .animated.hinge, .wf-active .hinge.animated-delay {
-    -webkit-animation-duration: 2s;
-    animation-duration: 2s; }
-  .animated.bounceIn,
-  .wf-active .bounceIn.animated-delay,
-  .animated.bounceOut, .wf-active .bounceOut.animated-delay {
-    -webkit-animation-duration: 0.75s;
-    animation-duration: 0.75s; }
-  .animated.flipOutX,
-  .wf-active .flipOutX.animated-delay,
-  .animated.flipOutY, .wf-active .flipOutY.animated-delay {
-    -webkit-animation-duration: 0.75s;
-    animation-duration: 0.75s; }
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn; }
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut; }
 
 @-webkit-keyframes bounceIn {
   0% {
@@ -61,38 +63,6 @@ body {
 .bounceIn {
   -webkit-animation-name: bounceIn;
   animation-name: bounceIn; }
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-.fadeIn {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn; }
-
-@-webkit-keyframes fadeOut {
-  0% {
-    opacity: 1; }
-  100% {
-    opacity: 0; } }
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1; }
-  100% {
-    opacity: 0; } }
-
-.fadeOut {
-  -webkit-animation-name: fadeOut;
-  animation-name: fadeOut; }
 
 @-webkit-keyframes slideInDown {
   0% {
@@ -133,6 +103,36 @@ body {
 .slideInUp {
   -webkit-animation-name: slideInUp;
   animation-name: slideInUp; }
+
+/*!
+Animate.css - http://daneden.me/animate
+Licensed under the MIT license - http://opensource.org/licenses/MIT
+Copyright (c) 2015 Daniel Eden
+*/
+body {
+  -webkit-backface-visibility: hidden; }
+
+.animated, .wf-active .animated-delay {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+  .animated.infinite, .wf-active .infinite.animated-delay {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite; }
+  .animated.hinge, .wf-active .hinge.animated-delay {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s; }
+  .animated.bounceIn,
+  .wf-active .bounceIn.animated-delay,
+  .animated.bounceOut, .wf-active .bounceOut.animated-delay {
+    -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s; }
+  .animated.flipOutX,
+  .wf-active .flipOutX.animated-delay,
+  .animated.flipOutY, .wf-active .flipOutY.animated-delay {
+    -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s; }
 
 html {
   box-sizing: border-box; }
