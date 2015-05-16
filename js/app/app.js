@@ -18,6 +18,7 @@ require([
 
   var $window;
   var $header;
+  var fontInterval;
 
   // on DOM ready
   $(function() {
@@ -40,6 +41,8 @@ require([
       threshold: 75,
       swipe: onSwipe
     });
+
+    fontInterval = setInterval( checkFonts, 250 );
 
   }
 
@@ -103,6 +106,20 @@ require([
 
       default:
       break;
+
+    }
+
+  }
+
+  function checkFonts() {
+
+    if ($('html').hasClass('wf-active')) {
+
+      TweenMax.to('.load-shield', 0.5, { force3D: true, autoAlpha: 0 });
+      TweenMax.from('.animated.slideInUp', 0.5, { force3D: true, y: 100, ease: Power4.easeOut });
+      TweenMax.from('.animated.slideInDown', 0.5, { force3D: true, y: -100, ease: Power4.easeOut });
+      TweenMax.from('.animated.bounceIn', 0.5, { force3D: true, scale: 0, ease: Back.easeOut });
+      clearInterval(fontInterval);
 
     }
 

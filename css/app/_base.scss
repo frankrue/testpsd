@@ -13,7 +13,7 @@ body {
 }
 
 // animations should start after fonts are loaded
-.wf-active .animated-delay {
+.fonts-active .animated-delay {
   @extend .animated;
   animation-delay: 1s;
 }
